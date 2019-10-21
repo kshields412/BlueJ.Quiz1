@@ -36,7 +36,7 @@ public class StringUtilsRemoveCharacterTest {
 
         //When
         String actual = utilities.removeCharacter(word, charToRemove);
-
+        //assertEquals(expected.length(), actual.length());
         //Then
         assertEquals(expected, actual);
     }

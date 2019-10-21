@@ -22,13 +22,11 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         String[] reverse = valueToBeReversed.split(" ");
 
-        for (int i = reverse.length-1; i >= 0; i--) {
-            stringBuilder.append(reverse[i]).append(' ');
-        }for (int j = reverse.length-1; j >= 0; j--){
-            stringBuilder.append(reverse[j]).append(' ');
+        for (int i = reverse.length-1; i >= 0; i++) {
+            sb.append(i).append("");
         }
         return valueToBeReversed;
     }
@@ -56,9 +54,20 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
+        StringBuilder sb = new StringBuilder();
 
-        return null;
+        int j = 0;
+
+        for (int i = 0; i < value.length(); i++) {
+            char current = value.charAt(i);
+            if (current != charToRemove){ 
+                sb.append(current);
+            }
+        }
+        
+        return sb.toString();
     }
+    
 
     /**
      * @param sentence String delimited by spaces representative of a sentence
