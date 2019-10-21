@@ -22,7 +22,15 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        StringBuilder stringBuilder = new StringBuilder();
+        String[] reverse = valueToBeReversed.split(" ");
+
+        for (int i = reverse.length-1; i >= 0; i--) {
+            stringBuilder.append(reverse[i]).append(' ');
+        }for (int j = reverse.length-1; j >= 0; j--)
+        stringBuilder.append(reverse[j]);
+    
+        return valueToBeReversed;
     }
 
     /**
@@ -42,14 +50,13 @@ public class StringUtilities {
         return c;
     }
 
-
     /**
      * @param value value to have character removed from
      * @param charToRemove character to be removed from `value`
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-       
+
         return null;
     }
 
