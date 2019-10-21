@@ -27,9 +27,9 @@ public class StringUtilities {
 
         for (int i = reverse.length-1; i >= 0; i--) {
             stringBuilder.append(reverse[i]).append(' ');
-        }for (int j = reverse.length-1; j >= 0; j--)
-        stringBuilder.append(reverse[j]);
-    
+        }for (int j = reverse.length-1; j >= 0; j--){
+            stringBuilder.append(reverse[j]).append(' ');
+        }
         return valueToBeReversed;
     }
 
