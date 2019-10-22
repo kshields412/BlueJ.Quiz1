@@ -23,11 +23,9 @@ public class LoopFun
      * @return Upper case string of the first letter of each word
      */
     public String acronym(String phrase) {
-                String result = phrase.replaceAll("\\B.|\\P{L}", "").toUpperCase();
-                return result;
-        } 
-
-       
+        String result = phrase.replaceAll("\\B.|\\P{L}", "").toUpperCase();
+        return result;
+    } 
 
     /**
      * To prevent anyone from reading our messages, we can encrypt it so it will only be readable by its
@@ -42,7 +40,11 @@ public class LoopFun
      * @return the encrypted string by shifting each character by three character
      */
     public String encrypt(String word) {
-        
-      return null;
+        String result = "";
+
+        for (char c : word.toCharArray()) {
+            result += Character.toString((char) (((c - 'a' + 3) % 26) + 'a'));
+        }
+        return result;
     } 
 }
