@@ -54,11 +54,17 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        
-        return null;
-    }
-    
+        char [] c = value.toCharArray (); 
+        String result = "";
+        for (int i=0; i< value.length();i++){
+            char letter = c[i]; 
+            if (letter != charToRemove){
+                result += letter;
+            }
+        }
+        return result;
 
+    }
     /**
      * @param sentence String delimited by spaces representative of a sentence
      * @return last `word` in sentence
